@@ -1,0 +1,99 @@
+header{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: ease all 0.5s;
+  .logos{
+    width: 170px;
+    
+    a{
+      display: block;
+      transition: ease all 0.5s;
+      width: 100%;
+    }
+  }
+  &.sticky-nav{
+    background-color: rgba(0,0,0,0.6);
+    .logos{
+      a{
+        width: 70%;
+      }
+    }
+  }
+}
+.header-home{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    .navbar-expand-lg .navbar-nav .nav-link{
+      text-transform: uppercase;
+      color:$white;
+      padding-left: 0;
+      padding-right: 0;
+     &:hover{
+      font-weight: bold;
+     }
+    }
+    .nav-item{
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      &.active{
+        .nav-link{
+          font-weight: bold;
+          border-bottom:2px solid $white;
+        }
+      }
+      
+    
+    }
+}
+
+
+
+.header-right{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.contactus-btn{
+  background-color: $primary-color;
+  color:$white;
+  text-align: center;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  &:hover{
+    color:$white;
+    background-color: $second-color;
+  }
+}
+
+.lan{
+  color:$white;
+  margin-right: 30px;
+  a{
+    color:$white;
+    &.active, &:hover{
+      font-weight: bold;
+      color:$white;
+    }
+  }
+}
+.account{
+  margin-left: 8px;
+}
+.account-btn{
+  width: 40px;
+  flex:0 0 40px;
+  height: 40px;
+  background-color: #B41129;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    width: 20px;
+  }
+}

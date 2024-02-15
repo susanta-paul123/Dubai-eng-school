@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="ui/stylesheet/main.css" rel="stylesheet">
+        
+        <link href="ui/stylesheet/custom.css" rel="stylesheet">
+        <link rel="icon" href="ui/media/images/favicon.png">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        body{
+            height:5000px;
+            background-image: url('ui/media/images/ptr3.png');
+            background-color: #c8c1c2;
+            background-repeat: repeat-y;
+        }
+    </style>
+</head>
+<body>
+
+    <button type="button" class="btn btn-primary" id="mmm" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <input type="text" placeholder="Your email" name="email" ref="email" onkeypress="handleEnterKey(event)"/>
+    
+</body>
+
+<script src="ui/javascript/uicreep-minify.js"></script>
+<script src="ui/javascript/custom.js"></script>
+<script>
+//     function handleEnterKey(e){ 
+//     if(e.keyCode == 13){
+//         try{
+//             e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+
+//         }catch(err){
+//             console.log(err.message); 
+//         }
+//     }
+// }
+
+var myModalEl = document.getElementById('mmm')
+myModalEl.addEventListener('hidden.bs.modal', function (event) {
+    alert("Show!");
+})
+
+
+
+$(document).ready(function(){
+  $('#keyword').keypress(function(e){
+    if(e.keyCode == 13){ // enter pressed
+        try{
+            e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+
+            //DO ALTERNATE ACTION RATHER THAN SEND ENTER
+
+        }catch(err){
+            console.log(err.message); 
+        }
+    }
+  });
+
+
+
+
+});
+
+</script>
+</html>
